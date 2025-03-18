@@ -1,13 +1,6 @@
-import './App.css';
-
-function App() {
-
-
+export const App: = () => {
+    // @ts-ignore
     return (
-        <>
-
-        </>
+        <div></div>
     );
-}
-
-export default App
+};
