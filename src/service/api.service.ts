@@ -1,6 +1,7 @@
 import {TodoModel} from "../models/TodoModel.ts";
 import {PostModel} from "../models/PostModel.ts";
 import {CommentModel} from "../models/CommentModel.ts";
+import {PostResponseDummyjson} from "../models/PostResponseDummyjson.ts";
 
 const endpointTodos = import.meta.env.VITE_API_BASE_URL + '/todos'
 const endpointPosts = import.meta.env.VITE_API_BASE_URL + '/posts'
@@ -12,8 +13,9 @@ const loadTodos = async (): Promise<TodoModel[]> => {
 }
 
 const loadPosts = async (): Promise<PostModel[]> => {
-    return await fetch(endpointPosts)
+    const response: PostResponseDummyjson = await fetch(endpointPosts)
         .then(value => value.json());
+    return response.posts;
 }
 
 
