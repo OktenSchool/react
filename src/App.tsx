@@ -8,6 +8,8 @@ function App() {
     return (
         <>
             <Menu/>
+            This is app component
+
             <Outlet/>
         </>
     );
